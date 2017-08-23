@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eHj-4n-FBr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post View Controller-->
+        <scene sceneID="lkD-0K-GbD">
+            <objects>
+                <viewController id="A2r-zq-EmD" customClass="PostViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="My2-3a-ZDf"/>
+                        <viewControllerLayoutGuide type="bottom" id="UeD-al-8F0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Fb-lK-uz0" customClass="PostTextViewCell">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6D-GP-wlq">
+                                <rect key="frame" x="8" y="21" width="61" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="rVH-sZ-lkc"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTopped:" destination="A2r-zq-EmD" eventType="touchUpInside" id="ou1-S1-302"/>
+                                    <segue destination="BZT-PP-d0k" kind="unwind" identifier="cancel" unwindAction="unwindViewController:" id="hfw-rP-a5p"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click below to write...  ≤ 1200 chracters only " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IG7-az-qJb">
+                                <rect key="frame" x="16" y="43" width="305" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koF-z8-lke">
+                                <rect key="frame" x="284" y="21" width="75" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Wdj-kV-nOj"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="submitButtonTopped:" destination="A2r-zq-EmD" eventType="touchUpInside" id="1o8-WH-y8e"/>
+                                    <segue destination="BZT-PP-d0k" kind="unwind" identifier="save" unwindAction="unwindViewController:" id="WU9-fH-v11"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qAX-79-pNQ">
+                                <rect key="frame" x="8" y="72" width="359" height="329"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="329" id="jna-9N-OzE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UeD-al-8F0" firstAttribute="top" secondItem="qAX-79-pNQ" secondAttribute="bottom" constant="217" id="1XG-9M-iS8"/>
+                            <constraint firstItem="q6D-GP-wlq" firstAttribute="leading" secondItem="qAX-79-pNQ" secondAttribute="leading" id="Cht-28-3qq"/>
+                            <constraint firstItem="IG7-az-qJb" firstAttribute="top" secondItem="My2-3a-ZDf" secondAttribute="bottom" constant="23" id="Jpy-hd-3d9"/>
+                            <constraint firstItem="IG7-az-qJb" firstAttribute="leading" secondItem="3Fb-lK-uz0" secondAttribute="leadingMargin" id="MVz-GQ-Ldw"/>
+                            <constraint firstItem="qAX-79-pNQ" firstAttribute="leading" secondItem="3Fb-lK-uz0" secondAttribute="leadingMargin" constant="-8" id="NHG-9C-ap0"/>
+                            <constraint firstItem="qAX-79-pNQ" firstAttribute="top" secondItem="koF-z8-lke" secondAttribute="bottom" constant="25" id="Q3L-Mt-MUa"/>
+                            <constraint firstItem="koF-z8-lke" firstAttribute="trailing" secondItem="3Fb-lK-uz0" secondAttribute="trailingMargin" id="XkU-xF-vub"/>
+                            <constraint firstItem="q6D-GP-wlq" firstAttribute="bottom" secondItem="koF-z8-lke" secondAttribute="bottom" id="ZRo-JM-FEl"/>
+                            <constraint firstItem="IG7-az-qJb" firstAttribute="top" secondItem="My2-3a-ZDf" secondAttribute="bottom" constant="23" id="aUG-j2-yQc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IG7-az-qJb" secondAttribute="trailing" constant="38" id="iwc-Zf-EPp"/>
+                            <constraint firstItem="qAX-79-pNQ" firstAttribute="top" secondItem="IG7-az-qJb" secondAttribute="bottom" constant="8" symbolic="YES" id="l9T-R6-5gr"/>
+                            <constraint firstItem="q6D-GP-wlq" firstAttribute="top" secondItem="3Fb-lK-uz0" secondAttribute="top" constant="21" id="uZt-fw-cgr"/>
+                            <constraint firstItem="koF-z8-lke" firstAttribute="top" secondItem="My2-3a-ZDf" secondAttribute="bottom" constant="1" id="ufg-tj-NUo"/>
+                            <constraint firstItem="qAX-79-pNQ" firstAttribute="centerX" secondItem="3Fb-lK-uz0" secondAttribute="centerX" id="xAc-UI-7cV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="tab_plus_black" id="Vty-s2-PQZ">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="q6D-GP-wlq" id="mOL-Zo-VWp"/>
+                        <outlet property="submitButton" destination="koF-z8-lke" id="nWT-x3-Nll"/>
+                        <outlet property="textViewWrite" destination="qAX-79-pNQ" id="ghh-Az-IAG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H71-ZO-93l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="BZT-PP-d0k" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="397.15142428785612"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="pVy-Et-icw">
+            <objects>
+                <tabBarController id="eHj-4n-FBr" customClass="MainTabBarController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Hmt-JY-jMG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iO1-OB-Gwg" kind="relationship" relationship="viewControllers" id="fch-lm-TZk"/>
+                        <segue destination="A2r-zq-EmD" kind="relationship" relationship="viewControllers" id="zzG-Br-JDA"/>
+                        <segue destination="3ge-F9-YOX" kind="relationship" relationship="viewControllers" id="uJm-D4-Fmh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hj9-lo-UVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-213" y="6"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="ya2-Jq-7w2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="iO1-OB-Gwg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Qne-xg-Jxf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5PG-TJ-PnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="-321.58920539730138"/>
+        </scene>
+        <!--FindFirends-->
+        <scene sceneID="o9q-5V-ESQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FindFirends" id="3ge-F9-YOX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="vcd-Y0-Pds"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eaq-Yt-BvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214" y="538"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_plus_black" width="25" height="25"/>
+    </resources>
+</document>
