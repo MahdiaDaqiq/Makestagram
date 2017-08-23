@@ -45,6 +45,7 @@ class HomeViewController: UIViewController {
     let timestampFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
+        print("blah")
         
         return dateFormatter
     }()
