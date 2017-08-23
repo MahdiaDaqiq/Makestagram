@@ -45,7 +45,6 @@ class HomeViewController: UIViewController {
     let timestampFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
-        print("blah")
         
         return dateFormatter
     }()
@@ -257,11 +256,6 @@ class HomeViewController: UIViewController {
                         })
                     })
                 }
-                
-                
-                
-               
-
                 let okAlert = UIAlertController(title: nil, message: "The user has been blocked.", preferredStyle: .alert)
                 okAlert.addAction(UIAlertAction(title: "Ok", style: .default))
                 self.present(okAlert, animated: true)

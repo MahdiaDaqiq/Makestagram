@@ -100,40 +100,6 @@ struct FollowService {
     static func isUserFollowed(_ user: User, byCurrentUserWithCompletion completion: @escaping (Bool) -> Void) {
         let currentUID = User.current.uid
         let ref = Database.database().reference().child("followers").child(user.uid)
-        ////////////
-        let SalaamUid = "JwfNhzNRV6PmFat23JV8B8RyWYw1"
-        let followData = ["followers/\(SalaamUid)/\(currentUID)" : true,
-                          "following/\(currentUID)/\(SalaamUid)" : true]
-        
-        let ref2 = Database.database().reference()
-        ref2.updateChildValues(followData) { (error, _) in
-            if let error = error {
-                assertionFailure(error.localizedDescription)
-            }
-        }
-        // 1
-            UserService.posts(for: user) { (posts) in
-                // 2
-                let postKeys = posts.flatMap { $0.key }
-                
-                // 3
-                var followData = [String : Any]()
-                let timelinePostDict = ["poster_uid" : SalaamUid]
-                postKeys.forEach { followData["timeline/\(currentUID)/\($0)"] = timelinePostDict }
-                
-                // 4
-                ref2.updateChildValues(followData, withCompletionBlock: { (error, ref2) in
-                    if let error = error {
-                        assertionFailure(error.localizedDescription)
-                    }
-                    
-                    // 5
-                })
-            }
-        
-//////////////////
-        
-        
         ref.queryEqual(toValue: nil, childKey: currentUID).observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? [String : Bool] {
                 completion(true)

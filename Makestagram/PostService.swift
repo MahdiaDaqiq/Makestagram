@@ -35,10 +35,7 @@ struct PostService {
     static func show(posterUID: String, completion: @escaping ([Post]?) -> Void) {
         
         //THIS IS THE ONE THAT WAS CALLED WHEN SEAN WAS HELPING WOOT
-        let currentUID = User.current.uid
 
-        
- 
         let ref = Database.database().reference().child("posts").child(posterUID)
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in

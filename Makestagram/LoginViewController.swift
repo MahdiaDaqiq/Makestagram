@@ -45,6 +45,26 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // 1
+        if let identifier = segue.identifier {
+            // 2
+            if identifier == "displayTerms" {
+                // 3
+                print("Transitioning to the Display Note View Controller")
+            }
+        }
+    
+    }
+    
+    
+    @IBAction func unwindViewController(_ segue: UIStoryboardSegue) {
+        
+    }
+
+    
+ 
 
 }
 
