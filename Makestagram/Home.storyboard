@@ -210,9 +210,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIy-F0-z5R">
-                                <rect key="frame" x="0.0" y="72" width="375" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIy-F0-z5R">
+                                <rect key="frame" x="0.0" y="72" width="375" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -225,13 +224,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bIy-F0-z5R" firstAttribute="leading" secondItem="3sC-P2-EHf" secondAttribute="leading" id="PfP-ZT-AAh"/>
+                            <constraint firstItem="bIy-F0-z5R" firstAttribute="top" secondItem="xim-0E-nWb" secondAttribute="bottom" constant="8" symbolic="YES" id="Tbb-G4-F6Q"/>
+                            <constraint firstAttribute="trailing" secondItem="bIy-F0-z5R" secondAttribute="trailing" id="khy-Tm-h2x"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFo-rv-ZSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2636" y="-323.38830584707648"/>
+            <point key="canvasLocation" x="2632.8000000000002" y="-324.28785607196403"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Wrj-UC-wR5">
@@ -248,7 +252,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gls-70-IxC">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text" base64-UTF8="YES">
+                                <string key="text" base64-UTF8="YES">
 U3RhdGUgb2YgTmV3IFlvcmsHUmV2LsKgMTMzQTE4QQcHwqAHVEVSTVMgT0YgVVNFClNBTEFBTQcHClZl
 cnNpb24gRGF0ZTogQXVndXN0IDIyLCAyMDE3ClRFUk1TIE9GIFVTRSBBR1JFRU1FTlQKCkJ5IHVzaW5n
 IG9yIGFjY2Vzc2luZyBTYWxhYW0gb3IgYW55IGFwcGxpY2F0aW9ucyBvciB3ZWJzaXRlIG1hZGUgYXZh
@@ -1061,7 +1065,7 @@ UmlnaHRzIGFuZCBSZXNwb25zaWJpbGl0aWVzCuKAosKgIERpc2NsYWltZXIK4oCiwqAgVE9VCuKAosKg
 IFRvUwrigKLCoCBUT1MK4oCiwqAgVE9DBwcKClRlcm1zIG9mIFVzZSAoUmV2LiAxMzNBMThBKQpQQUdF
 MTQgLyAgUEFHRVJFRiBfU3ViRG9jdW1lbnRFbmQwICAxNAoKCgoKCgoKCgoKCgoKCgoKVGVybXMgb2Yg
 VXNlIChSZXYuIDEzM0ExOEEpBwcKCgo
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
